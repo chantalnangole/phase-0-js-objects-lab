@@ -1,6 +1,5 @@
-//Write your code here
-
-attendee = {
+// Attendee Object
+let attendee = {
   attendeeId: "T001",
   name: "Alice Smith",
   event: "JavaScript Conference",
@@ -8,24 +7,47 @@ attendee = {
   ticketPrice: 150.00
 };
 
-function logAttendeeName() {
+// Function to log attendee name
+function logAttendeeName(attendee) {
   console.log(attendee.name);
 }
-function logTicketPrice() {
+
+// Function to log ticket price
+function logTicketPrice(attendee) {
   console.log(attendee.ticketPrice);
 }
-function updateTicketType(newType) {
+
+// Function to update ticket type
+function updateTicketType(attendee, newType) {
   attendee.ticketType = newType;
-}   
-function updateTicketPrice(newPrice) {
+}
+
+// Function to update ticket price
+function updateTicketPrice(attendee, newPrice) {
   attendee.ticketPrice = newPrice;
-} 
-function removeEventProperty() {  
+}
+
+// Function to remove event property
+function removeEventProperty(attendee) {
   delete attendee.event;
-} 
-function addCheckedInProperty() {
+}
+
+// Function to add checkedIn property
+function addCheckedInProperty(attendee) {
   attendee.checkedIn = true;
 }
+
+// Example usage (for testing)
+logAttendeeName(attendee);
+logTicketPrice(attendee);
+
+updateTicketType(attendee, "Regular");
+updateTicketPrice(attendee, 100);
+
+removeEventProperty(attendee);
+addCheckedInProperty(attendee);
+
+console.log(attendee);
 
 
 
